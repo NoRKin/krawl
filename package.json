@@ -1,0 +1,28 @@
+{
+  "name": "krawl",
+  "version": "1.0.0",
+  "description": "Extract your modules methods name",
+  "main": "krawl.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NoRKin/krawl.git"
+  },
+  "keywords": [
+    "Extract",
+    "Metadata"
+  ],
+  "author": "NoRKin",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/NoRKin/krawl/issues"
+  },
+  "homepage": "https://github.com/NoRKin/krawl#readme",
+  "dependencies": {
+    "async": "^1.5.2",
+    "glob": "^7.0.0",
+    "lodash": "^4.5.0"
+  }
+}
