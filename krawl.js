@@ -57,26 +57,19 @@ krawl.constructMetaData = function(modules) {
 
 };
 
-krawl.writeDump = function(json) {
+krawl.writeDump = function(path, name, json) {
     fs.writeFile('meta.json', JSON.stringify(json, null, 4), function(err) {
           if (err) throw err;
           console.log('Metadata has been saved under \'meta.json\'');
     });
 };
 
-krawl.start = function(path) {
+krawl.generate = function(path, next) {
     krawl.searchFiles(path, function(files) {
         krawl.loadFiles(files, function(modules) {
-            var meta = krawl.constructMetaData(modules);
-
-            krawl.writeDump(meta);
+                next(krawl.constructMetaData(modules));
         });
     });
 };
-
-if (process.argv[2])
-    krawl.start(process.argv[2]);
-else
-    console.log('Please provide the path you want to extract');
 
 module.exports = krawl;
